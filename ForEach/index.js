@@ -104,3 +104,64 @@ function firstOccurrence(arr, target) {
     })
     return i
 } console.log(firstOccurrence([1, 2, 3, 3, 4, 5], 3));
+// Q13. Write a function to find the second smallest element in an array using forEach().
+function secondSmallest(arr) {
+    let smallest = arr[0]
+    let sSmallest = Infinity
+    arr.forEach(elm => {
+        if (smallest > elm) {
+            sSmallest = smallest
+            smallest = elm
+        } else if (elm !== smallest && elm < sSmallest) {
+            sSmallest = elm
+        }
+    })
+    return sSmallest
+} console.log(secondSmallest([1, 2, 3, 4, 5]));
+// Q14. Write a function to concatenate all elements of an array into a single string using forEach().
+function arrToStr(arr) {
+    let result = ""
+    arr.forEach(elm => {
+        result += elm
+    })
+    return result
+} console.log(arrToStr([1, 2, 3, 4, 5, "hi"]));
+// Q15. Write a function to remove all elements from an array that satisfy a given condition using forEach().
+function satisfyCondition(arr) {
+    arr.forEach((elm, i, a) => {
+        if (elm % 2 == 0) {
+            arr.splice(i, 1)
+        }
+    })
+    return arr
+} console.log(satisfyCondition([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+// Q16. Write a function to find the sum of the squares of all even elements in an array using forEach().
+function sumofSquares(arr) {
+    let result = []
+    arr.forEach(elm => {
+        if (elm % 2 == 0) {
+            result.push(elm * elm)
+        }
+    })
+    return result
+} console.log(sumofSquares([1, 2, 3, 4, 5, 6]));
+// Q17. Write a function to count how many elements in an array are equal to a given value using forEach().
+function checkElement(arr, value) {
+    let counter = 0
+    arr.forEach(elm => {
+        if (elm == value) {
+            counter++
+        }
+    })
+    return counter
+} console.log(checkElement([1, 2, 3, 4, 5, 1, 6], 1));
+// Q18. Write a function to find the first positive element in an array using forEach().
+function firstPositive(arr) {
+    let result = 0
+    arr.forEach((elm) => {
+        if (elm > 0 && result == 0) {
+            result = elm
+        }
+    })
+    return result
+} console.log(firstPositive([-99, -65, 1, 4, 0]));
