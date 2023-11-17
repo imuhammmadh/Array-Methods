@@ -165,3 +165,36 @@ function firstPositive(arr) {
     })
     return result
 } console.log(firstPositive([-99, -65, 1, 4, 0]));
+// Q19. Write a function to find the longest string in an array using forEach().
+function longestString(arr) {
+    let max = -Infinity
+    let result = ""
+    arr.forEach(elm => {
+        if (elm.length > max) {
+            max = elm.length
+            result = elm
+        }
+    })
+    return result
+} console.log(longestString(["Jaipur", "Rajasthan", "India", "Asia"]));
+// Q20. Write a function to filter out all negative elements from an array using forEach().
+function negativeFilter(arr) {
+    let result = []
+    arr.forEach((elm, i) => {
+        if (elm > 0) {
+            result.push(elm)
+        }
+    })
+    return result
+} console.log(negativeFilter([-1, 2, -3, 4, -5, 6, -7, 8, -9, 10]));
+// Q21. Write a function to reverse the order of elements in an array using forEach()
+//  Q22. Write a function to remove all elements from an array that are divisible by a given value using forEach().
+function removeDivisible(arr, value) {
+    let result = []
+    arr.forEach(elm => {
+        if (elm % value == 0) {
+            result.push(elm)
+        }
+    })
+    return result
+} console.log(removeDivisible([1, 2, 4, 36, 78, 31], 3));
