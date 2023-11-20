@@ -198,3 +198,35 @@ function removeDivisible(arr, value) {
     })
     return result
 } console.log(removeDivisible([1, 2, 4, 36, 78, 31], 3));
+// Q23.  Write a function to remove all falsy values from an array using forEach().
+function removefalsy(arr) {
+    let trueValues = []
+    arr.forEach(elm => {
+        if (elm) {
+            trueValues.push(elm)
+        }
+    });
+    return trueValues
+} console.log(removefalsy([true, false, -1, "", null, undefined, 1, 2, 3, 4, -5, NaN, -0]));
+// Q24. Write a function to find the smallest positive integer that is not present in an array using forEach().
+function smallestNotPresent(arr) {
+    let min = Infinity
+    arr.forEach(elm => {
+        if (elm < min) {
+            min = elm
+        }
+    })
+    return min - 1
+} console.log(smallestNotPresent([8, 9, 7, 2, 3, 4, 5, 6]));
+// Q25.  Write a function to find the index of the smallest element in an array using forEach().
+function smallestIndex(arr) {
+    let result = 0
+    let min = Infinity
+    arr.forEach((elm, i) => {
+        if (elm < min) {
+            min = elm
+            result = i
+        }
+    })
+    return result
+} console.log(smallestIndex([25, 19, 13, 73, 27, 4, 6]));
