@@ -48,3 +48,29 @@ function product(arr, arr2) {
     let multiply = arr.map((elm, i) => elm * arr2[i])
     return multiply
 } console.log(product([1, 2, 3, 4, 5], [6, 7, 8, 9, 10]));
+// Q11. Calculate the length of each word in a sentence using map().
+function lengthofString(str) {
+    let result = str.split(" ")
+    return result.map(elm => elm.length)
+} console.log(lengthofString("I am learning MERN"));
+// Q12. Reverse each string in a list using map().
+function Reverse(arr) {
+    return arr.map((elm, i) => {
+        let reversed = (arr.length - 1) - i
+        return arr[reversed]
+    })
+} console.log(Reverse(["I", "am", "Muhammad"]));
+// Q13. Given an array of strings, capitalize the first letter of each word using map().
+function capitalize(arr) {
+    return arr.map((elm, i) => elm[0].toUpperCase() + elm.slice(1))
+} console.log(capitalize(["I", "am", "from", "Rajasthan"]));
+// Q14. Given an array of strings, convert each string to its reverse using map().
+function stringtoreverse(str) {
+    return str.split("").map((e, i, arr) => {
+        return arr[arr.length - 1 - i]
+    }).join("")
+} console.log(stringtoreverse("India is the 7th largest country of the world"));
+// Q5. Take an array of numbers and make them strings
+function convertToString(arr) {
+    return arr.map((e, i) => e.toString())
+} console.log(convertToString([1, 2, 3, 4, 5]));
