@@ -70,7 +70,50 @@ function stringtoreverse(str) {
         return arr[arr.length - 1 - i]
     }).join("")
 } console.log(stringtoreverse("India is the 7th largest country of the world"));
-// Q5. Take an array of numbers and make them strings
+// Q15. Take an array of numbers and make them strings
 function convertToString(arr) {
     return arr.map((e, i) => e.toString())
 } console.log(convertToString([1, 2, 3, 4, 5]));
+// Q16. Given an array of numbers, find the minimum number in each subarray using map().
+function minimumSubarr(arr) {
+    return arr.map((e, i) => Math.min(...e))
+} console.log(minimumSubarr([[1, 2, 3,], [4, 5, 6], [7, 8, 9]]));
+// Q17. Given an array of strings, replace specific words with another word using map().
+function changeWords(arr, o, n) {
+    return arr.map(e => {
+        if (e == o) {
+            e = n
+        }
+        return e
+    })
+} console.log(changeWords(["this", "is", "asia"], "asia", "europe"));
+// Q18. Given an array of strings, remove duplicate words from each string using map().
+function removeDuplicateWords(arr) {
+    return arr.map((e, i) => {
+        let splited = e.split(" ")
+        let unique = splited.filter((word, i) => splited.indexOf(word) == i)
+        return unique.join()
+    })
+} console.log(removeDuplicateWords(["this this", "is is", "javaScript", "code"]));
+// Q19.  Given an array of strings, find the number of words in each string using map().
+function numberOfWords(arr) {
+    return arr.map((e, i) => {
+        let splited = e.split(" ")
+        return splited.length
+    })
+} console.log(numberOfWords(["hello this", "is", "javaScript", "code"]));
+// Q20. Given an array of strings, remove special characters from each string using map().
+function removeSpecial(arr) {
+    let regex = /[^\w\s]/g
+    return arr.map((e, i) => {
+        return e.replace(regex, "")
+    })
+} console.log(removeSpecial(['Hello!', 'How are you?', 'I love programming!']));
+// Q21. Given an array of strings, return a new array with the strings that start with the letter A.
+function startWithA(arr) {
+    return arr.map((e, i) => {
+        if (e[0] == "a" || e[0] == "A") {
+            return e
+        }
+    }).filter((e) => e !== undefined)
+} console.log(startWithA(["alex", "likes", "Apple"]));
