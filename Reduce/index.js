@@ -74,3 +74,29 @@ function largestIndex(arr) {
     }, 0)
     return arr.indexOf(largest)
 } console.log(largestIndex([1, 2, 5, 3, 4]));
+// Q11. Write a function to find the longest word in an array using reduce().
+function longestword(arr) {
+    return arr.reduce((p, c) => {
+        if (p.length < c.length) {
+            p = c
+        }
+        return p
+    })
+} console.log(longestword(["javaScript", "kotlin", "java", "c++"]));
+// Q12. Write a function to check if an array is sorted in ascending order using reduce().
+function isSorted(arr) {
+    return arr.reduce((p, c, i) => {
+        if (arr[i] < arr[i - 1]) {
+            return false
+        } else {
+            return p
+        }
+    }, true)
+} console.log(isSorted([1, 2, 3, 4]));
+// Q13. Write a function to find the sum of the squares of all elements in an array using reduce().
+function sumSquares(arr) {
+    return arr.reduce((p, c) => {
+        return p += c * c
+    }, 0)
+} console.log(sumSquares([2, 3, 4]));
+// Q14. Write a function to check if an array contains a specific element using reduce().
