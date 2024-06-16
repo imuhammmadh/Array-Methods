@@ -87,7 +87,7 @@ function lengthFiltered(arr, length) {
 //Q11:Write a function to remove all duplicate elements from an array using forEach().
 function duplicateRemover(arr) {
     let num = []
-    let result = arr.forEach((e) => {
+    arr.forEach((e) => {
         if (!num.includes(e)) {
             num.push(e)
         }
@@ -97,7 +97,7 @@ function duplicateRemover(arr) {
 // Q12. Write a function to find the first occurrence of an element in an array using forEach().
 function firstOccurrence(arr, target) {
     let i = -1
-    let result = arr.forEach((elm, idx) => {
+    arr.forEach((elm, idx) => {
         if (elm == target && i == -1) {
             i = idx
         }

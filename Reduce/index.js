@@ -99,4 +99,4 @@ function sumSquares(arr) {
         return p += c * c
     }, 0)
 } console.log(sumSquares([2, 3, 4]));
-// Q14. Write a function to check if an array contains a specific element using reduce().
+
