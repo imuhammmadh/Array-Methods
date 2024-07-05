@@ -77,7 +77,7 @@ function convertToString(arr) {
 // Q16. Given an array of numbers, find the minimum number in each subarray using map().
 function minimumSubarr(arr) {
     return arr.map((e, i) => Math.min(...e))
-} console.log(minimumSubarr([[1, 2, 3,], [4, 5, 6], [7, 8, 9]]));
+} console.log(minimumSubarr([[1, 2, 3], [4, 5, 6], [7, 8, 9]]));
 // Q17. Given an array of strings, replace specific words with another word using map().
 function changeWords(arr, o, n) {
     return arr.map(e => {
